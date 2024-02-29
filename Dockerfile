@@ -1,2 +1,5 @@
 FROM alpine:latest
-COPY Golang_Templates_Parsing .
+
+# Copy the built Go binary into the container
+COPY . .
+
