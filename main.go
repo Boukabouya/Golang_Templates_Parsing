@@ -14,14 +14,14 @@ func main() {
 	var err error
 	tpl, err = template.ParseFiles("index.html")
 	if err != nil {
-		log.Fatalf("Error parsing template files: %v", err)// log for os.Stderr ,Fatalf typically used for logging fatal errors that require the program to stop immediately
+		log.Fatalf("Error parsing template files: %v", err) // log for os.Stderr ,Fatalf typically used for logging fatal errors that require the program to stop immediately
 	}
 
 	// Register the indexHandler function to handle requests to the root path ("/")
 	http.HandleFunc("/", indexHandler)
 
 	// Start the HTTP server on port 8080
-	err = http.ListenAndServe(":8085", nil)
+	err = http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatalf("Error starting server: %v", err)
 	}
