@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golang-templates-parsing
+  namespace: golangtemp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: golang-templates-parsing
+  template:
+    metadata:
+      labels:
+        app: golang-templates-parsing
+    spec:
+      containers:
+        - name: golang-templates-parsing
+          image: rayeneamina/golang_templates_parsing
+          ports:
+            - containerPort: 8080
