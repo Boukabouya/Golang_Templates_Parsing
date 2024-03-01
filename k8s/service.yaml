@@ -6,9 +6,9 @@ metadata:
 spec:
   selector:
     app: golang-templates-parsing
-  type: NodePort
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 8085
+      targetPort: 8085
+  type: NodePort
 
